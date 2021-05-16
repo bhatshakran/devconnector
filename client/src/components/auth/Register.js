@@ -23,6 +23,7 @@ const Register = () => {
             console.log('Password does not match!')
         }else{
             console.log(formData)
+            console.log('checking this shizz!!!')
         }
     }
 
