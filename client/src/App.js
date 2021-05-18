@@ -11,6 +11,8 @@ import Alert from './components/layout/Alert'
 import setAuthToken from './utils/setAuthToken';
 import { loadUser } from './actions/auth';
 import { useEffect } from 'react';
+import Dashboard from './components/dashboard/Dashboard'
+import PrivateRoute from './routing/PrivateRoute'
 
 
 if(localStorage.token) {
@@ -34,6 +36,7 @@ function App() {
     <Switch>
       <Route exact path='/register' component={Register} />
       <Route exact path='/login' component={Login} />
+      <PrivateRoute exact path='/dashboard' component ={Dashboard} />
     </Switch>
      </section>
  
