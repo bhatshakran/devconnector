@@ -198,7 +198,7 @@ router.put(
              await profile.save();
              
 
-             res.json('Profile Exp Updated')
+             res.status(200).json({ msg: "Exp added" });
          } catch (err) {
              console.error(err.message)
              res.status(500).send('Server Error')

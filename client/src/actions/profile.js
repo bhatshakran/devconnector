@@ -79,11 +79,12 @@ export const addExperience = (formData, history) => async dispatch => {
             type:UPDATE_PROFILE,
             payload: res.data
         })
-        
+        history.push('/dashboard')
         dispatch(setAlert('Experience Added', 'success' ))
 
-        history.push('/dashboard')
+     
     } catch (err) {
+        console.log(err)
         const errors = err.response.data.errors;
            
         if(errors) {
@@ -108,6 +109,7 @@ export const addEducation = (formData, history) => async dispatch => {
         }
 
         const res = await axios.put('/api/profile/education', formData, config)
+        
 
         dispatch({
             type:UPDATE_PROFILE,
