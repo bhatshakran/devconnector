@@ -28,7 +28,6 @@ const EditProfile = ({profile:{profile, loading}, createProfile, getCurrentProfi
 
     useEffect(() => {
         getCurrentProfile()
-
         setFormData({
         company: loading || !profile.company ? '' : profile.company,
         website: loading || !profile.website ? '' : profile.website,
@@ -43,7 +42,8 @@ const EditProfile = ({profile:{profile, loading}, createProfile, getCurrentProfi
         youtube: loading || !profile.social ? '' : profile.social.youtube,
         instagram: loading || !profile.social ? '' : profile.social.instagram
         })
-    }, [])
+      
+    }, [getCurrentProfile, loading, profile])
 
 
     const {  company,
