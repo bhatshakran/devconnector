@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { Redirect } from 'react-router'
+import { Link } from 'react-router-dom'
 
 
 const Landing = ({isAuthenticated}) => {
@@ -21,8 +22,8 @@ const Landing = ({isAuthenticated}) => {
               other developers
             </p>
             <div className="buttons">
-              <a href="register.html" className="btn btn-primary">Sign Up</a>
-              <a href="login.html" className="btn btn-light">Login</a>
+              <Link to ="/register" className="btn btn-primary">Sign Up</Link>
+              <Link to ="/login" className="btn btn-light">Login</Link>
             </div>
           </div>
         </div>
