@@ -34,7 +34,7 @@ router.post('/', [
         }
 
 
-        const avatar = gravatar.url(email, {
+        const avatar = gravatar.url(`http:${email}`, {
             s:'200',
             r:'pg',
             d:'mm'
